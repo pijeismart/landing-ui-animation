@@ -1,0 +1,62 @@
+html,
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+}
+
+a,
+button {
+  cursor: pointer;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+// Typography
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  line-height: 1.2;
+}
+
+h1 {
+  @include heading1();
+}
+
+h2 {
+  @include heading2();
+}
+
+h3 {
+  @include heading3();
+}
+
+h4 {
+  @include heading4();
+}
+
+p {
+  @include bodyText();
+}

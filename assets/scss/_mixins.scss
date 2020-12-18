@@ -1,0 +1,41 @@
+@mixin mq($width, $type: max) {
+  @if map_has_key($breakpoints, $width) {
+      $width: map_get($breakpoints, $width);
+      @if $type == min {
+          $width: $width + 1px;
+      }
+      @media only screen and (#{$type}-width: $width) {
+          @content;
+      }
+  }
+}
+
+@mixin heading1() {
+font-weight: 600;
+font-size: 48px;
+}
+@mixin heading2() {
+font-weight: 600;
+font-size: 36px;
+@include mq('tablet') {
+  font-size: 30px;
+}
+}
+@mixin heading3() {
+font-weight: 600;
+font-size: 21px;
+}
+@mixin heading4() {
+font-weight: 300;
+font-size: 18px;
+}
+@mixin bodyText() {
+  font-size: 18px;
+  line-height: 28px;
+  @include mq('tablet') {
+    font-size: 15px;
+  }
+  @include mq('phablet') {
+    font-size: 18px;
+  }
+}
