@@ -1,3 +1,6 @@
-# Boilerplate
-This is boiler plate for startup.
-Bootstrap 5.0 and jQuery imported.
+# Type W
+Figma design to Landing page
+- Bootstrap 4.5.1
+- SCSS
+- SVG Animation
+- Wow.js
